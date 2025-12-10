@@ -93,6 +93,10 @@ a:hover {
   color: #ffc74a;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1940px;
   width: 100%;
@@ -137,6 +141,46 @@ a:hover {
   text-align: center;
   margin-left: 17px;
   margin-top: 22px;
+}
+
+.burger-btn {
+  display: block;
+  width: 30px;
+  height: 18px;
+  position: relative;
+  z-index: 5;
+  cursor: pointer;
+}
+.burger-btn span {
+  position: absolute;
+  top: calc(50% - 1px);
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transition: 0.3s;
+}
+.burger-btn span:first-child {
+  top: 0;
+}
+.burger-btn span:last-child {
+  top: auto;
+  bottom: 0;
+}
+.burger-btn.active span {
+  transform: scale(0);
+}
+.burger-btn.active span:first-child {
+  transform: rotate(-45deg);
+  top: calc(50% - 1px);
+}
+.burger-btn.active span:last-child {
+  transform: rotate(45deg);
+  bottom: calc(50% - 1px);
+}
+
+.burger-btn {
+  display: none;
 }
 
 .nav__menu {
@@ -299,7 +343,41 @@ a:hover {
   }
 }
 @media (max-width: 768px) {
+  .burger-btn {
+    display: block;
+    right: 50px;
+  }
   .menu-item {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    width: calc(100% - 20px);
+    margin-left: 10px;
+    height: 100vh;
+    background-color: #cf0505;
+    display: flex;
+    transition: 0.3s ease;
+    overflow: auto;
+  }
+  .menu-item.active {
+    left: 0;
+  }
+  .nav__menu {
+    padding: 30px;
+    flex-direction: column;
+    gap: 0;
+    margin: auto;
+  }
+  .nav__link {
+    display: block;
+    font-size: 45px;
+    line-height: 90px;
+  }
+  .nav__link:hover {
+    transform: scale(1.1);
+  }
+  .search__img {
     display: none;
   }
 }
@@ -344,6 +422,10 @@ a:hover {
   .header__txt {
     font-size: 14px;
     top: 620px;
+  }
+  .nav__link {
+    font-size: 35px;
+    line-height: 70px;
   }
 }
 @media (max-width: 400px) {

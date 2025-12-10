@@ -11,6 +11,14 @@ a {
 $bg-btn: #ffc74a;
 $col: $bg-btn;
 
+//-------------- body ----------------
+
+body {
+  &.lock {
+    overflow: hidden;
+  }
+}
+
 //----------- CONTAINER --------------
 
 .container {
@@ -60,6 +68,55 @@ $col: $bg-btn;
   text-align: center;
   margin-left: 17px;
   margin-top: 22px;
+}
+
+.burger-btn {
+  display: block;
+  width: 30px;
+  height: 18px;
+  position: relative;
+  z-index: 5;
+  cursor: pointer;
+
+  //display: none;
+  span {
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition: .3s;
+
+    &:first-child {
+      top: 0;
+    }
+
+    &:last-child {
+      top: auto;
+      bottom: 0;
+    }
+  }
+
+  &.active {
+    span {
+      transform: scale(0);
+
+      &:first-child {
+        transform: rotate(-45deg);
+        top: calc(50% - 1px);
+      }
+
+      &:last-child {
+        transform: rotate(45deg);
+        bottom: calc(50% - 1px);
+      }
+    }
+  }
+}
+
+.burger-btn {
+  display: none;
 }
 
 .menu-item {}
@@ -190,15 +247,15 @@ $col: $bg-btn;
 }
 
 @media (max-width: 1315px) {
-.header__title {
+  .header__title {
     width: 500px;
   }
 }
 
 @media (max-width: 1088px) {
   .header__title {
-      width: 400px;
-    }
+    width: 400px;
+  }
 }
 
 @media (max-width: 1020px) {
@@ -237,11 +294,52 @@ $col: $bg-btn;
 
 @media (max-width: 865px) {
   .header__title {
-      width: 300px;
-    }
+    width: 300px;
+  }
 }
+
 @media (max-width: 768px) {
+  .burger-btn {
+    display: block;
+    right: 50px;
+  }
+
   .menu-item {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    width: calc(100% - 20px);
+    margin-left: 10px;
+    height: 100vh;
+    background-color: #cf0505;
+    display: flex;
+    transition: .3s ease;
+    overflow: auto;
+
+    &.active {
+      left: 0;
+    }
+  }
+
+  .nav__menu {
+    padding: 30px;
+    flex-direction: column;
+    gap: 0;
+    margin: auto;
+  }
+
+  .nav__link {
+    display: block;
+    font-size: 45px;
+    line-height: 90px;
+
+    &:hover {
+      transform: scale(1.1 );
+    }
+  }
+
+  .search__img {
     display: none;
   }
 }
@@ -296,6 +394,11 @@ $col: $bg-btn;
   .header__txt {
     font-size: 14px;
     top: 620px;
+  }
+
+  .nav__link {
+    font-size: 35px;
+    line-height: 70px;
   }
 }
 
