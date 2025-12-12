@@ -446,3 +446,185 @@ body.lock {
     top: 565px;
   }
 }
+@media (max-width: 359px) {
+  .header__content {
+    height: 700px;
+  }
+}
+@media (max-width: 320px) {
+  .logo__img {
+    margin-left: 20px;
+  }
+  .header__content {
+    height: 659px;
+  }
+}
+.categories__row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: -217px;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+.photo-1__img {
+  padding-right: 5px;
+}
+
+.zakopane__img {
+  padding-right: 5px;
+}
+
+.zakopane__title {
+  font-size: 1.875rem;
+  font-family: "Montserrat";
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  line-height: 3.1;
+  letter-spacing: -0.05rem;
+  text-align: center;
+  margin-top: -150px;
+}
+
+.zacopane__suptitle {
+  font-size: 0.875rem;
+  font-family: "Montserrat";
+  color: rgb(255, 199, 74);
+  line-height: 6.571;
+  text-align: center;
+  margin-top: -61px;
+}
+
+.sandomierz__img {
+  padding-right: 5px;
+}
+
+.sandomierz__title {
+  font-size: 3rem;
+  font-family: "Montserrat";
+  color: rgba(255, 255, 255, 0.902);
+  font-weight: bold;
+  line-height: 1.9;
+  letter-spacing: -0.05rem;
+  text-align: center;
+  margin-top: -265px;
+}
+
+.sandomierz__suptitle {
+  font-size: 0.875rem;
+  font-family: "Montserrat";
+  color: rgb(255, 255, 255);
+  line-height: 6.571;
+  text-align: center;
+  margin-top: -48px;
+}
+
+.sandomierz__btn {
+  font-size: 0.875rem;
+  font-family: "Myriad Pro";
+  color: rgb(185, 128, 0);
+  line-height: 3.5;
+  letter-spacing: 0.15rem;
+  text-align: center;
+  text-align: center;
+  margin-top: 35px;
+  margin-left: 50%;
+  transform: translate(-50%);
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+.sandomierz__btn:hover {
+  transform: translate(-50%);
+  background-color: rgb(150, 108, 10);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.sandomierz__btn--m {
+  background-color: rgb(255, 199, 74);
+  width: 214px;
+  height: 51px;
+  z-index: 1;
+}
+
+.sopot__img {
+  padding-right: 5px;
+}
+
+.sopot__title {
+  font-size: 1.875rem;
+  font-family: "Montserrat";
+  color: rgba(255, 255, 255, 0.902);
+  font-weight: bold;
+  line-height: 3;
+  text-align: center;
+  margin-top: -150px;
+}
+
+.sopot__suptitle {
+  font-size: 0.875rem;
+  font-family: "Myriad Pro";
+  color: rgb(255, 199, 74);
+  line-height: 6.6;
+  letter-spacing: 0.09rem;
+  text-align: center;
+  margin-top: -60px;
+}
+
+@media (max-width: 1842px) {
+  .categories__row {
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 1201px) {
+  .categories__row {
+    justify-content: center;
+    gap: 20px;
+  }
+}
+@media (max-width: 1160px) {
+  .photo-2__img {
+    margin-top: 30px;
+  }
+  .sandomierz__btn--m {
+    width: 180px;
+    height: 40px;
+  }
+  .sandomierz__btn {
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 791px) {
+  .categories__row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .sandomierz-block {
+    margin-bottom: 85px;
+    margin-top: 25px;
+  }
+  .sandomierz__title {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 385px) {
+  .sandomierz__title {
+    font-size: 2rem;
+  }
+  .sandomierz__btn--m {
+    margin-top: 50px;
+  }
+  .sandomierz-block {
+    margin-bottom: 70px;
+  }
+}
