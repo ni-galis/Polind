@@ -1101,7 +1101,7 @@ body {
 }
 
 .explore-city__content {
-  height: 890px;
+  height: 899px;
   background-image: url('./../images/explore-city/02.png');
   background-repeat: no-repeat;
   background-position: 1010px -60px;
@@ -1176,12 +1176,20 @@ body {
 
 @media (max-width: 1940px) {
   .explore-city {
-    margin-top: -31px;
+    margin-top: -30px;
   }
 
-  .explore-city__content {
-    height: 870px;
+  .explore-city__title {
+    line-height: 6.9;
+  }
 
+
+  .explore-city__content {
+    height: 916px;
+  }
+
+  .column-info__title {
+    margin-top: 24px;
   }
 
   .info__text {
@@ -1425,5 +1433,84 @@ body {
   .column-img {
     margin-left: 5px;
     width: 280px;
+  }
+}
+
+//------------- LANDSCAPE -------------------
+
+.landscape__inner {
+  min-height: 642px;
+  max-width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  position: relative;
+}
+
+.landscape__title {
+  font-size: clamp(1.688rem, 0.885rem + 4.01vw, 5.75rem);
+  font-family: "Montserrat";
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  line-height: 1.3;
+  letter-spacing: -.04rem;
+  text-align: center;
+
+  position: absolute;
+  top: 177px;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 1;
+}
+
+.landscape__button {
+  width: 154px;
+  height: 51px;
+  margin-top: 322px;
+  position: absolute;
+  transform: translate(-50%);
+
+  &:hover {
+    transform: translate(-50%);
+  }
+}
+
+.landscape__suptitle {
+  font-size: 18px;
+  font-family: "Montserrat";
+  color: rgb(255, 255, 255);
+  text-align: center;
+
+  position: absolute;
+  top: 418px;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 1;
+
+  span {
+    color: #ffc74a;
+  }
+}
+
+@media (max-width: 1940px) {
+  .landscape__title {
+    width: 1200px;
+    line-height: 1.45;
+    letter-spacing: -.04rem;
+
+  }
+}
+
+@media (max-width: 575px) {
+.landscape__button {
+    margin-top: 300px;
+  }
+}
+
+@media (max-width: 320px) {
+  .landscape__button {
+      height: 49px;
+      font-size: 14px;
   }
 }
